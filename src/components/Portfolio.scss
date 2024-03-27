@@ -1,0 +1,14 @@
+.아이템리스트 {
+  display: flex;
+  gap: 50px;
+}
+
+.아이템 {
+  width: 100px;
+}
+
+.아이템 p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
