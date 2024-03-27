@@ -1,14 +1,14 @@
-.아이템리스트 {
-  display: flex;
-  gap: 50px;
-}
-
-.아이템 {
-  width: 100px;
-}
-
-.아이템 p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.portfolio {
+  &__category {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 50px auto;
+  }
 }

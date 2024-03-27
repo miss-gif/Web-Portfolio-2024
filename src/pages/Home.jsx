@@ -1,16 +1,17 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Portfolio from "../components/Portfolio";
+import "./Home.scss";
 
 const Home = () => {
   return (
-    <>
-      <Header />
+    <div className="wrapper">
+      {/* <Header /> */}
       <main>
         <Portfolio />
       </main>
-      <Footer />
-    </>
+      {/* <Footer /> */}
+    </div>
   );
 };
 
