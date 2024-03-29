@@ -1,0 +1,23 @@
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+section:first-child {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px red;
+}
+
+section {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px red;
+}

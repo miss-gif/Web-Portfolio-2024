@@ -1,0 +1,19 @@
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin text-ellipsis($line: 4) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  @content;
+}

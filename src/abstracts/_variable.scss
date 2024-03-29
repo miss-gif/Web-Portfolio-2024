@@ -1,0 +1,24 @@
+/* 색상 */
+$white: #fafafa;
+$black: #212121;
+
+$point-color: #00897b;
+
+/* 사이즈 */
+$desktop: 1920px;
+$tablet: 768px;
+$mobile: 480px;
+
+$header-height: 3.75rem;
+$padding-inline: 1.25rem; // 20px
+$transition06: all 0.6s;
+
+:root {
+  font-size: 16px;
+  @media (max-width: $tablet) {
+    font-size: 14px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,142 @@
+$font-h1: 5.625rem; // 90px
+$font-h2: 2.75rem; // 44px
+$font-h3: 1.5rem; // 24px
+$font-h4: 1.25rem; // 20px
+$font-h5: 1.125rem; // 18px
+
+/* 색상 */
+$white: #fafafa;
+$black: #212121;
+
+$point-color: #00897b;
+
+/* 사이즈 */
+$desktop: 1920px;
+$tablet: 768px;
+$mobile: 480px;
+
+$header-height: 3.75rem;
+$padding-inline: 1.25rem; // 20px
+$transition06: all 0.6s;
+
+:root {
+  font-size: 16px;
+  @media (max-width: $tablet) {
+    font-size: 14px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 12px;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin text-ellipsis($line: 4) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  @content;
+}
+
+.home {
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $padding-inline;
+  }
+  &__content {
+    text-transform: uppercase;
+  }
+  &__title {
+    font-size: $font-h1;
+    margin-top: 1rem;
+    @include tablet {
+      font-size: $font-h2;
+    }
+  }
+  &__subtitle {
+    font-size: $font-h3;
+    margin-top: 1rem;
+  }
+  &__description {
+    margin-top: 1rem;
+    line-height: 1.5;
+    display: inline-block;
+    max-width: calc($desktop/3);
+    @include text-ellipsis();
+  }
+  &__footer {
+    line-height: 1.5;
+    b {
+      display: inline-block;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+  }
+  &__link__icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  &__image {
+    max-width: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  .icon-button {
+    display: block;
+    width: 2.5rem;
+    padding: 0.5rem;
+    background-color: $white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition06;
+    img {
+      transition: $transition06;
+    }
+    &:hover {
+      background-color: darken($white, 10%);
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .view-button {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: $transition06;
+    background-color: transparent;
+    border: 1.5px solid $point-color;
+    color: $point-color;
+    &:hover {
+      background-color: $point-color;
+      color: $white;
+    }
+  }
+}
